@@ -4,19 +4,19 @@ In our daily life we carry several digital devices with us. The only thing that 
 
 This is a good use case for storing the device serial number or unique identification number in the blockchain. The functionality includes not just storing the serial number but also have the ability for the owner to prove device ownership. At the same time when the device is sold or transferred then the ownership on the blockchain should also be transferred to another owner.
 
-The following lists the functionality available in this smart contract.
+The following lists the functionality available in this smart contract. There are 6 functions that can be executed in /contracts/ProofOfDevice.sol
 
-1) Register Device: The owner of the device with unique serial number executes this function to store the unique serial number in the blockchain. For each unique Ethereum wallet address, up to 10 serial numbers can be stored. The function checks for duplicates and executes if the same serial number is not found. An event is emitted to record the transaction.
+1) Register Device (function claimDevice): The owner of the device with unique serial number executes this function to store the unique serial number in the blockchain. For each unique Ethereum wallet address, up to 10 serial numbers can be stored. The function checks for duplicates and executes if the same serial number is not found. An event is emitted to record the transaction.
 
-2) Request Proof: Imagine you are about to buy a phone through craigslist or eBay and wanted to confirm if the device serial is real and verify owner. You get the serial number from the listing or listing owner. Then you execute the request proof function with a unique serial number. If the serial number already exists in the contract then the transaction is executed successfully and an event is emitted sending notification to the device owner.
+2) Request Proof (function requestProof) : Imagine you are about to buy a phone through craigslist or eBay and wanted to confirm if the device serial is real and verify owner. You get the serial number from the listing or listing owner. Then you execute the request proof function with a unique serial number. If the serial number already exists in the contract then the transaction is executed successfully and an event is emitted sending notification to the device owner.
 
-3) Approve Proof: When someone request proof, as a device owner you can approve proof which will execute transaction and emit event if the transaction is successful. This proves the device ownership
+3) Approve Proof (function approveProof): When someone request proof, as a device owner you can approve proof which will execute transaction and emit event if the transaction is successful. This proves the device ownership
 
-4) Request Transfer: When the device is sold or transferred to another owner, the new owner can request transfer of serial number. Once the transaction is successful, an event is emitted to notify the owner to approve transfer.
+4) Request Transfer (function requestTransfer) : When the device is sold or transferred to another owner, the new owner can request transfer of serial number. Once the transaction is successful, an event is emitted to notify the owner to approve transfer.
 
-5) Approve Transfer: Device owner can approve transfer by calling this function and sending the serial number. If the transaction is successful then the device ownership is successfully changed and the original owner can no longer have control over this device ID.
+5) Approve Transfer (function approveTransfer) : Device owner can approve transfer by calling this function and sending the serial number. If the transaction is successful then the device ownership is successfully changed and the original owner can no longer have control over this device ID.
 
-6) Destruct device: If the device no longer exists or device owner does not want the device ID to be in the blockchain then this function can be executed by the device owner. If the transaction is executed successfully then the device ID entry is deleted. However all the events emitted for the device is still there to prove transaction history.
+6) Destruct device (function destructDevice): If the device no longer exists or device owner does not want the device ID to be in the blockchain then this function can be executed by the device owner. If the transaction is executed successfully then the device ID entry is deleted. However all the events emitted for the device is still there to prove transaction history.
 
 Find the Youtube link for functionality and UI demonstration. <TODO: Youtube link>
 
@@ -111,33 +111,6 @@ Command to execute: npm run dev
 ---------------- Step 7 Output ----------------------------------------
 > proof-of-device@1.0.0 dev /Users/arunnedun/source/proof-of-devices
 > lite-server
-
-** browser-sync config **
-{ injectChanges: false,
-  files: [ './**/*.{html,htm,css,js}' ],
-  watchOptions: { ignored: 'node_modules' },
-  server:
-   { baseDir: [ './src', './build/contracts' ],
-     middleware: [ [Function], [Function] ] } }
-[Browsersync] Access URLs:
- -----------------------------------
-       Local: http://localhost:3000
-    External: http://10.0.1.113:3000
- -----------------------------------
-          UI: http://localhost:3001
- UI External: http://10.0.1.113:3001
- -----------------------------------
-[Browsersync] Serving files from: ./src
-[Browsersync] Serving files from: ./build/contracts
-[Browsersync] Watching files...
-18.08.23 16:04:12 200 GET /index.html
-
 ----------------End of Output ----------------------------------
-
-
-
-
-
-step 6: Start lite server and open user interface for demonstration
 
 User interface will open in chrome browser. Based on the functionality explained in the youtube video, please test and provide feedback.
