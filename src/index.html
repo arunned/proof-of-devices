@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Proof of Device - Final Project</title>
+    <link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+
+    <div id="show_message_bar" class="translucent" ></div>
+  <div class="main-container">
+    <div class="form-container">
+      <h1>Proof of Device</h1>
+      <div class="form">
+        <input type="text" id="name" placeholder="Device ID" required />
+        <input type="button" value="Register" id="btnSave" />
+        <input type="button" value="Req. Proof" id="btnReqProof" />
+        <input type="button" value="Req. Transfer" id="btnReqTransfer" />
+      </div>
+    </div>
+    <div class="table-container">
+      <table id="table1">
+        <thead id="table-head">
+          <tr>
+            <th>S.N.</th>
+            <th>Device ID</th>
+            <th>Owner</th>
+            <th>TX Origin</th>
+            <th>Action/Status</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="truffle-contract.js"></script>
+    <script src="smoothscroll.js" charset="utf-8"></script>
+    <script src="contactTable.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+
+    <script>
+
+
+      </script>
+
+  </body>
+</html>
