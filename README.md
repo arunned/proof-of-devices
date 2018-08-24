@@ -30,6 +30,7 @@ Step 1: Download project zip file from github and unzip to a folder
 
 
 Step 2: Install zeppelin-solidity using the command
+
 command to execute: npm install -E zeppelin-solidity
 
 ---------------- Step 2 Output ----------------------------------------
@@ -40,6 +41,7 @@ found 0 vulnerabilities
 ----------------End of Output ----------------------------------
 
 Step 3: Compilation should complete successfully without errors
+
 command to execute: truffle compile
 
 ---------------- Step 3 Output ----------------------------------------
@@ -51,6 +53,7 @@ Writing artifacts to ./build/contracts
 ----------------End of Output ----------------------------------
 
 Step 4: Confirm 6 tests are passed successfully
+
 command to execute: truffle test
 
 ---------------- Step 4 Output ----------------------------------------
@@ -70,6 +73,7 @@ Using network 'development'.
 
 
 Step 5: Migration to development environment should be completed successfully. Note down the deployed contract address just for reference.
+
 command to execute: truffle migrate
 
 ---------------- Step 5 Output ----------------------------------------
@@ -93,6 +97,7 @@ Saving artifacts...
 ----------------End of Output ----------------------------------
 
 Step 6: Install npm lite-server to serve the UI
+
 Command to execute: npm install --save-dev lite-server
 
 ---------------- Step 6 Output ----------------------------------------
@@ -105,7 +110,8 @@ Pass --update-binary to reinstall or --build-from-source to recompile
 + lite-server@2.4.0
 ----------------End of Output ----------------------------------
 
-Step 7: npm run dev - Start the UI to serve the web page from /src folder
+Step 7: Start the UI to serve the web page from /src folder
+
 Command to execute: npm run dev 
 
 // Serves the front-end on http://localhost:3000
