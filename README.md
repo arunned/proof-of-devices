@@ -18,11 +18,13 @@ The following lists the functionality available in this smart contract. There ar
 
 6) Destruct device (function destructDevice): If the device no longer exists or device owner does not want the device ID to be in the blockchain then this function can be executed by the device owner. If the transaction is executed successfully then the device ID entry is deleted. However all the events emitted for the device is still there to prove transaction history.
 
-Find the Youtube link for functionality and UI demonstration. <TODO: Youtube link>
+Find the Youtube link for functionality and UI demonstration. Youtube link: https://youtu.be/V-lNcSGaweg
 
 Installation & Execution steps
 
-Pre requsites: truffle, node, npm, metamask, ganache, ganache-cli
+Pre-requsites: truffle, node, npm, metamask, ganache, ganache-cli
+
+NOTE: the ganache port is set to 7545. If you are using ganaceh-cli, please change it to 8545 in truffle.js
 
 Step 1: Download project zip file from github and unzip to a folder
 
